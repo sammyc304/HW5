@@ -12,15 +12,6 @@ public class ShapeState {
   private final ShapeType s;
   private final CPComponent cp;
 
-  public ShapeState() {
-    this.tick = 0;
-    this.p = new Position();
-    this.d = new Dimension();
-    this.c = new Color(0, 0, 0);
-    this.s = null;
-    this.cp = new CPComponent(p, d, c, s);
-  }
-
   public ShapeState(int tick, Position p, Dimension d, Color c, ShapeType s) {
     this.tick = tick;
     this.p = new Position(p);
@@ -32,11 +23,9 @@ public class ShapeState {
 
   @Override
   public String toString() {
-    StringBuilder ret_val = new StringBuilder();
-    ret_val.append(tick).append(" ").append(p.toString())
-        .append(" ").append(d.toString()).append(c.getRed())
-        .append(" ").append(c.getGreen()).append(" ").append(c.getBlue());
-    return ret_val.toString();
+    return tick + " " + p.toString() +
+        " " + d.toString() + c.getRed() +
+        " " + c.getGreen() + " " + c.getBlue();
   }
 
   @Override

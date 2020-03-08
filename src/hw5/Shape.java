@@ -9,12 +9,6 @@ public class Shape {
   private final String name;
   private final ShapeType s;
 
-  public Shape() {
-    this.log = new ArrayList<>();
-    this.name = "";
-    this.s = null;
-  }
-
   public Shape(String name, int tick, Position p, Dimension d, Color c, ShapeType s) {
     this.log = new ArrayList<>();
     this.name = name;

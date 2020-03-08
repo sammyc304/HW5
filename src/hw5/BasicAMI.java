@@ -30,9 +30,9 @@ public class BasicAMI implements AnimationModelInterface {
           .append(entry.getValue().getShapeType().toString()).append("\n\n");
       int size = entry.getValue().getLog().size();
       for (int i = 0; i < size; ++i) {
-        ret_val.append("motion ").append(entry.getKey()).append(" ").
-            append(entry.getValue().getLog().get(i).toString());
         if (i < size - 1) {
+          ret_val.append("motion ").append(entry.getKey()).append(" ").
+              append(entry.getValue().getLog().get(i).toString());
           ret_val.append("   ").append("motion ").append(entry.getKey()).append(" ").
               append(entry.getValue().getLog().get(i + 1).toString());
         }
