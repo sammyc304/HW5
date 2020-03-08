@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Shape {
 
-  ArrayList<ShapeState> log;
-  String name;
-  ShapeType s;
+  private final ArrayList<ShapeState> log;
+  private final String name;
+  private final ShapeType s;
 
   public Shape() {
     this.log = new ArrayList<>();
@@ -24,5 +24,17 @@ public class Shape {
 
   public void setNewState(int tick, Position p, Dimension d, Color c) {
     log.add(new ShapeState(tick, p, d, c, s));
+  }
+
+  public ArrayList<ShapeState> getLog() {
+    return (ArrayList<ShapeState>) log.clone();
+  }
+
+  public ShapeType getShapeType() {
+    return s;
+  }
+
+  public String getName() {
+    return name;
   }
 }

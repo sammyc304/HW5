@@ -1,5 +1,7 @@
 package hw5;
 
+import java.util.Objects;
+
 public class Dimension {
 
   private final int h;
@@ -26,5 +28,27 @@ public class Dimension {
 
   public int getW() {
     return this.w;
+  }
+
+  @Override
+  public String toString() {
+    return w + " " + h;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(this);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof ShapeState)) {
+      return false;
+    }
+    Dimension temp = (Dimension) obj;
+    return (temp.h == this.h && temp.w == this.w);
   }
 }
