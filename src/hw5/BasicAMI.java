@@ -4,8 +4,15 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * BasicAMI implements the Animation Interface. This implementation is the bare minimum of what this
+ * interface needs to function.
+ */
 public class BasicAMI implements AnimationModelInterface {
 
+  /**
+   * Only data field, represents the current list of shapes
+   */
   private final Map<String, Shape> elements;
 
   public BasicAMI() {
@@ -18,8 +25,18 @@ public class BasicAMI implements AnimationModelInterface {
   }
 
   @Override
-  public void addMotion(String name, int tick, Position p, Dimension d, Color c) {
+  public void modifyShape(String name, int tick, Position p, Dimension d, Color c) {
     elements.get(name).setNewState(tick, p, d, c);
+  }
+
+  @Override
+  public void removeShape(String name) {
+    elements.remove(name);
+  }
+
+  @Override
+  public void removeAll() {
+    elements.clear();
   }
 
   @Override

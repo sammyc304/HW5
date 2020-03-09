@@ -2,7 +2,10 @@ package hw5;
 
 import java.util.Objects;
 
-public class Position {
+/**
+ * Position is a class to represent a 2D position on a grid.
+ */
+public final class Position {
 
   private final int x;
   private final int y;
@@ -22,10 +25,18 @@ public class Position {
     this.y = pos.y;
   }
 
+  /**
+   * getX returns the x coordinate.
+   * @return int, x
+   */
   public int getX() {
     return this.x;
   }
 
+  /**
+   * getY returns the y coordinate.
+   * @return int, y
+   */
   public int getY() {
     return this.y;
   }

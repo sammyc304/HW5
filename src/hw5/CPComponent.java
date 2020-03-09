@@ -5,6 +5,7 @@ import java.util.Map;
 
 import hw5.shapes.Oval;
 import hw5.shapes.Rectangle;
+import hw5.shapes.Star;
 import hw5.shapes.Triangle;
 
 public class CPComponent extends Component {
@@ -15,7 +16,8 @@ public class CPComponent extends Component {
   private final ShapeType s;
   private static final Map<ShapeType, Function<Position, Dimension,
       ShapeCommand>> knownCommands = Map.of(ShapeType.OVAL, Oval::new,
-      ShapeType.RECTANGLE, Rectangle::new, ShapeType.TRIANGLE, Triangle::new);
+      ShapeType.RECTANGLE, Rectangle::new, ShapeType.TRIANGLE, Triangle::new,
+      ShapeType.STAR, Star::new);
 
   public CPComponent(Position p, Dimension d, Color c, ShapeType s) {
     this.p = new Position(p);

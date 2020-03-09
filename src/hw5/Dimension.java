@@ -2,7 +2,10 @@ package hw5;
 
 import java.util.Objects;
 
-public class Dimension {
+/**
+ * Dimension is a class to represent the height and width of a shape.
+ */
+public final class Dimension {
 
   private final int h;
   private final int w;
@@ -22,10 +25,18 @@ public class Dimension {
     this.w = dim.w;
   }
 
+  /**
+   * getH returns the h component.
+   * @return int, h
+   */
   public int getH() {
     return this.h;
   }
 
+  /**
+   * getH returns the w component.
+   * @return int, w
+   */
   public int getW() {
     return this.w;
   }

@@ -3,22 +3,22 @@ package hw5;
 import java.awt.*;
 import java.util.Objects;
 
+/**
+ * ShapeState represents a shape at a single moment. A list of these make up the lifespan of a
+ * shape.
+ */
 public class ShapeState {
 
   private final int tick;
   private final Position p;
   private final Dimension d;
   private final Color c;
-  private final ShapeType s;
-  private final CPComponent cp;
 
-  public ShapeState(int tick, Position p, Dimension d, Color c, ShapeType s) {
+  public ShapeState(int tick, Position p, Dimension d, Color c) {
     this.tick = tick;
     this.p = new Position(p);
     this.d = new Dimension(d);
     this.c = new Color(c.getRGB());
-    this.s = s;
-    this.cp = new CPComponent(p, d, c, s);
   }
 
   @Override
@@ -44,6 +44,6 @@ public class ShapeState {
     ShapeState temp = (ShapeState) obj;
     return (temp.tick == this.tick &&
         temp.p.equals(this.p) && temp.d.equals(this.d)
-        && temp.c.equals(this.c) && temp.s == this.s && temp.cp.equals(this.cp));
+        && temp.c.equals(this.c));
   }
 }

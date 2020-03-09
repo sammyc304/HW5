@@ -1,8 +1,11 @@
 package hw5;
 
+/**
+ * ShapeType is an enum that represents the different kinds of shapes that this model can display.
+ */
 public enum ShapeType {
 
-  TRIANGLE("triangle"), RECTANGLE("rectangle"), OVAL("oval");
+  TRIANGLE("triangle"), RECTANGLE("rectangle"), OVAL("oval"), STAR("star");
 
   private final String name;
 
