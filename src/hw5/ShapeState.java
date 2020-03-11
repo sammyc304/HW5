@@ -28,6 +28,10 @@ public class ShapeState {
         " " + c.getGreen() + " " + c.getBlue();
   }
 
+  public Position getP() {
+    return this.p;
+  }
+
   @Override
   public int hashCode() {
     return Objects.hashCode(this);
@@ -42,8 +46,6 @@ public class ShapeState {
       return false;
     }
     ShapeState temp = (ShapeState) obj;
-    return (temp.tick == this.tick &&
-        temp.p.equals(this.p) && temp.d.equals(this.d)
-        && temp.c.equals(this.c));
+    return (temp.tick == this.tick && temp.getP().equals(this.p) && temp.d.equals(this.d) && temp.c.equals(this.c));
   }
 }

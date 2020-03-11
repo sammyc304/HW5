@@ -16,6 +16,13 @@ public interface AnimationModelInterface {
   void addShape(Shape s);
 
   /**
+   * getShape gets a shape object from the AMI object.
+   *
+   * @param name shape to be retrieved
+   */
+  Shape getShape(String name);
+
+  /**
    * modifyShape changes the characteristics of a specific shape in the frame
    *
    * @param name Name of shape to be modified

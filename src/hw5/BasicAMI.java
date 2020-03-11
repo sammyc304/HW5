@@ -25,12 +25,24 @@ public class BasicAMI implements AnimationModelInterface {
   }
 
   @Override
+  public Shape getShape(String name) {
+    if(!this.elements.containsKey(name)){
+      throw new IllegalArgumentException("Shape is not in the ami");
+    }
+
+    return elements.get(name);
+  }
+
+  @Override
   public void modifyShape(String name, int tick, Position p, Dimension d, Color c) {
     elements.get(name).setNewState(tick, p, d, c);
   }
 
   @Override
   public void removeShape(String name) {
+    if(!elements.containsKey(name)) {
+      throw  new IllegalArgumentException(("Shape already doesn't exist in the AMI"));
+    }
     elements.remove(name);
   }
 

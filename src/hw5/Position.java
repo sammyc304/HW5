@@ -56,10 +56,10 @@ public final class Position {
     if (this == obj) {
       return true;
     }
-    if (!(obj instanceof ShapeState)) {
+    if (!(obj instanceof Position)) {
       return false;
     }
     Position temp = (Position) obj;
-    return (temp.x == this.x && temp.y == this.y);
+    return (temp.getX() == this.x && temp.getY() == this.y);
   }
 }

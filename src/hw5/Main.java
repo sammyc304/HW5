@@ -13,7 +13,7 @@ public class Main {
     b.addShape(c);
     b.modifyShape("Second", 10, new Position(5, 5), new Dimension(4, 4), Color.CYAN);
     b.removeShape("Second");
-    b.removeAll();
+    //b.removeAll();
     System.out.print(b.textOutput());
     /*Frame frame = new Frame();
     frame.add(new CPComponent(new Position(1, 1), new Dimension(100, 100), Color.CYAN, ShapeType.OVAL));

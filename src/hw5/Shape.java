@@ -2,6 +2,7 @@ package hw5;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Shape represents an element within our animation model.
@@ -57,4 +58,18 @@ public class Shape {
   public String getName() {
     return name;
   }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof Shape)) {
+      return false;
+    }
+    Shape temp = (Shape) obj;
+    return (temp.log.get(temp.log.size() - 1).equals(this.log.get(this.log.size() - 1)));
+  }
+
+
 }
