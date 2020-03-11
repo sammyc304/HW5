@@ -1,6 +1,6 @@
 package hw5;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -13,6 +13,16 @@ public class Shape {
   private final String name;
   private final ShapeType s;
 
+  /**
+   * Constructor for shape class.
+   *
+   * @param name Name of string
+   * @param tick Tick
+   * @param p    Position
+   * @param d    Dimension
+   * @param c    Color
+   * @param s    ShapeType
+   */
   public Shape(String name, int tick, Position p, Dimension d, Color c, ShapeType s) {
     this.log = new ArrayList<>();
     this.name = name;
@@ -35,7 +45,7 @@ public class Shape {
   /**
    * getLog returns a list of a ShapeStates.
    *
-   * @return ArrayList</ ShapeState>, log
+   * @return ArrayList of ShapeState, log
    */
   public ArrayList<ShapeState> getLog() {
     return (ArrayList<ShapeState>) log.clone();
@@ -57,6 +67,11 @@ public class Shape {
    */
   public String getName() {
     return name;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(this);
   }
 
   @Override

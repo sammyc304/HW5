@@ -15,6 +15,12 @@ public final class Dimension {
     this.w = 0;
   }
 
+  /**
+   * Additional constructor.
+   *
+   * @param h height
+   * @param w width
+   */
   public Dimension(int h, int w) {
     if (h < 0 || w < 0) {
       throw new IllegalArgumentException("Invalid Dimensions");

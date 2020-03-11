@@ -1,6 +1,6 @@
 package hw5;
 
-import java.awt.*;
+import java.awt.Color;
 
 /**
  * AnimationModelInterface is used to represent a series of shapes moving in a frame at different
@@ -23,7 +23,7 @@ public interface AnimationModelInterface {
   Shape getShape(String name);
 
   /**
-   * modifyShape changes the characteristics of a specific shape in the frame
+   * modifyShape changes the characteristics of a specific shape in the frame.
    *
    * @param name Name of shape to be modified
    * @param tick The tick time of the motion
@@ -34,19 +34,19 @@ public interface AnimationModelInterface {
   void modifyShape(String name, int tick, Position p, Dimension d, Color c);
 
   /**
-   * removeShape removes a shape based on the inputted name
+   * removeShape removes a shape based on the inputted name.
    *
    * @param name The shape to be removed
    */
   void removeShape(String name);
 
   /**
-   * removeAll removes all shapes from the frame
+   * removeAll removes all shapes from the frame.
    */
   void removeAll();
 
   /**
-   * textOutput returns a string of the shapes in the frame
+   * textOutput returns a string of the shapes in the frame.
    *
    * @return String of the text representation of the shapes in the frame
    */

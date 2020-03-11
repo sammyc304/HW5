@@ -1,6 +1,6 @@
 package hw5;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Objects;
 
 /**
@@ -14,6 +14,14 @@ public class ShapeState {
   private final Dimension d;
   private final Color c;
 
+  /**
+   * Constructor for ShapeState.
+   *
+   * @param tick Tick
+   * @param p    Position
+   * @param d    Dimension
+   * @param c    Color
+   */
   public ShapeState(int tick, Position p, Dimension d, Color c) {
     if (tick < 0) {
       throw new IllegalArgumentException("Invalid Tick");
@@ -32,7 +40,7 @@ public class ShapeState {
   }
 
   /**
-   * Returns position
+   * Returns position.
    *
    * @return p
    */
@@ -54,6 +62,7 @@ public class ShapeState {
       return false;
     }
     ShapeState temp = (ShapeState) obj;
-    return (temp.tick == this.tick && temp.getP().equals(this.p) && temp.d.equals(this.d) && temp.c.equals(this.c));
+    return (temp.tick == this.tick && temp.getP().equals(this.p)
+        && temp.d.equals(this.d) && temp.c.equals(this.c));
   }
 }

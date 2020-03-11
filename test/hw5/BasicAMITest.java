@@ -1,9 +1,10 @@
 package hw5;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import java.awt.*;
+import java.awt.Color;
 
 /**
  * Test suite for BasicAMI. Tests valid construction, functionality, and exceptions.

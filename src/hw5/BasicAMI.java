@@ -1,6 +1,6 @@
 package hw5;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 public class BasicAMI implements AnimationModelInterface {
 
   /**
-   * Only data field, represents the current list of shapes
+   * Only data field, represents the current list of shapes.
    */
   private final Map<String, Shape> elements;
 
@@ -26,7 +26,7 @@ public class BasicAMI implements AnimationModelInterface {
 
   @Override
   public Shape getShape(String name) {
-    if(!this.elements.containsKey(name)){
+    if (!this.elements.containsKey(name)) {
       throw new IllegalArgumentException("Shape is not in the ami");
     }
 
@@ -43,8 +43,8 @@ public class BasicAMI implements AnimationModelInterface {
 
   @Override
   public void removeShape(String name) {
-    if(!elements.containsKey(name)) {
-      throw  new IllegalArgumentException(("Shape already doesn't exist in the AMI"));
+    if (!elements.containsKey(name)) {
+      throw new IllegalArgumentException(("Shape already doesn't exist in the AMI"));
     }
     elements.remove(name);
   }
