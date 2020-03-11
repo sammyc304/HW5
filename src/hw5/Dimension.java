@@ -56,10 +56,10 @@ public final class Dimension {
     if (this == obj) {
       return true;
     }
-    if (!(obj instanceof ShapeState)) {
+    if (!(obj instanceof Dimension)) {
       return false;
     }
     Dimension temp = (Dimension) obj;
-    return (temp.h == this.h && temp.w == this.w);
+    return (temp.getH() == this.h && temp.getW() == this.w);
   }
 }
