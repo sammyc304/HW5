@@ -16,6 +16,9 @@ public final class Dimension {
   }
 
   public Dimension(int h, int w) {
+    if (h < 0 || w < 0) {
+      throw new IllegalArgumentException("Invalid Dimensions");
+    }
     this.h = h;
     this.w = w;
   }

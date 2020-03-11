@@ -15,6 +15,9 @@ public class ShapeState {
   private final Color c;
 
   public ShapeState(int tick, Position p, Dimension d, Color c) {
+    if (tick < 0) {
+      throw new IllegalArgumentException("Invalid Tick");
+    }
     this.tick = tick;
     this.p = new Position(p);
     this.d = new Dimension(d);
@@ -28,6 +31,11 @@ public class ShapeState {
         " " + c.getGreen() + " " + c.getBlue();
   }
 
+  /**
+   * Returns position
+   *
+   * @return p
+   */
   public Position getP() {
     return this.p;
   }

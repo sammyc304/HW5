@@ -35,6 +35,9 @@ public class BasicAMI implements AnimationModelInterface {
 
   @Override
   public void modifyShape(String name, int tick, Position p, Dimension d, Color c) {
+    if (!elements.containsKey(name)) {
+      throw new IllegalArgumentException(("Shape doesn't exist in the AMI"));
+    }
     elements.get(name).setNewState(tick, p, d, c);
   }
 
